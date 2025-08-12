@@ -38,6 +38,13 @@ const appMenuItems = [
   ),
 
   MenuItems(
+    title: 'Snackbar & Dialogs',
+    subtitle: 'Snackbar y Dialogs',
+    link: SnackbarScreen.name,
+    icon: Icons.info_outline,
+  ),
+
+  MenuItems(
     title: 'Animaciones',
     subtitle: 'Contenedor personalizadas',
     link: AnimatedScreen.name,
@@ -57,12 +64,7 @@ const appMenuItems = [
     icon: Icons.list_alt_outlined,
   ),
 
-  MenuItems(
-    title: 'Snackbar & Dialogs',
-    subtitle: 'Snackbar y Dialogs',
-    link: SnackbarScreen.name,
-    icon: Icons.info_outline,
-  ),
+  
 
   MenuItems(
     title: 'UI Controls + Tiles',
