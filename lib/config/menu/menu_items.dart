@@ -29,6 +29,14 @@ const appMenuItems = [
     link: CardsScreen.name,
     icon: Icons.card_giftcard_outlined,
   ),
+
+  MenuItems(
+    title: 'Progress',
+    subtitle: 'Generales y Controlados',
+    link: ProgressScreen.name,
+    icon: Icons.refresh_rounded,
+  ),
+
   MenuItems(
     title: 'Animaciones',
     subtitle: 'Contenedor personalizadas',
@@ -47,13 +55,6 @@ const appMenuItems = [
     subtitle: 'Listas infinitas y Pull to refresh',
     link: InfiniteScrollScreen.name,
     icon: Icons.list_alt_outlined,
-  ),
-
-  MenuItems(
-    title: 'Progress',
-    subtitle: 'Indicadores de progreso',
-    link: ProgressScreen.name,
-    icon: Icons.refresh_outlined,
   ),
 
   MenuItems(
