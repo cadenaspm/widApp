@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:widgets_app/presentation/screens/screens.dart';
 
 class MenuItems {
@@ -29,5 +28,45 @@ const appMenuItems = [
     subtitle: 'Contenedor estilizado',
     link: CardsScreen.name,
     icon: Icons.card_giftcard_outlined,
+  ),
+  MenuItems(
+    title: 'Animaciones',
+    subtitle: 'Contenedor personalizadas',
+    link: AnimatedScreen.name,
+    icon: Icons.animation_outlined,
+  ),
+  MenuItems(
+    title: 'App Tutorial',
+    subtitle: 'Introducción a la App',
+    link: AppTutorialScreen.name,
+    icon: Icons.accessibility_new_outlined,
+  ),
+
+  MenuItems(
+    title: 'Infinte Scroll & Pull to refresh',
+    subtitle: 'Listas infinitas y Pull to refresh',
+    link: InfiniteScrollScreen.name,
+    icon: Icons.list_alt_outlined,
+  ),
+
+  MenuItems(
+    title: 'Progress',
+    subtitle: 'Indicadores de progreso',
+    link: ProgressScreen.name,
+    icon: Icons.refresh_outlined,
+  ),
+
+  MenuItems(
+    title: 'Snackbar & Dialogs',
+    subtitle: 'Snackbar y Dialogs',
+    link: SnackbarScreen.name,
+    icon: Icons.info_outline,
+  ),
+
+  MenuItems(
+    title: 'UI Controls + Tiles',
+    subtitle: 'Controles de UI',
+    link: UiControlsScreen.name,
+    icon: Icons.check_box_outlined,
   ),
 ];
