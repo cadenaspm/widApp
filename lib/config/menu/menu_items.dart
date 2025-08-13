@@ -45,11 +45,16 @@ const appMenuItems = [
   ),
 
   MenuItems(
-    title: 'Animaciones',
-    subtitle: 'Contenedor personalizadas',
+    title: 'Animated container',
+    subtitle: 'Statefull widget animado',
     link: AnimatedScreen.name,
     icon: Icons.animation_outlined,
   ),
+
+
+
+
+
   MenuItems(
     title: 'App Tutorial',
     subtitle: 'Introducción a la App',
