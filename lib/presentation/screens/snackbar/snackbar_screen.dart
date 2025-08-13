@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SnackbarScreen extends StatelessWidget {
 
@@ -22,6 +23,25 @@ class SnackbarScreen extends StatelessWidget {
 
   void openDialog(BuildContext ctx){
     
+    showDialog(
+      context: ctx, 
+      barrierDismissible: false,
+      builder: (context) => AlertDialog(
+        title: Text('¿Estas seguro?'),
+        content: Text('Excepteur laboris occaecat ullamco aliqua nostrud eu et dolore ex est excepteur amet deserunt.'),
+        actions: [
+          TextButton(
+            onPressed: () => ctx.pop(), 
+            child: Text('Cancelar')
+          ),
+          FilledButton(
+            onPressed: () => ctx.pop(), 
+            child: Text('Aceptar')
+          )
+        ],
+      ),
+    );
+
   }
 
   @override
@@ -52,7 +72,7 @@ class SnackbarScreen extends StatelessWidget {
             ),
 
             FilledButton.tonal(
-              onPressed: (){}, 
+              onPressed: () => openDialog(context), 
               child: Text('Mostrar dialogo')
             )
           ],
