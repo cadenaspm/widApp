@@ -58,15 +58,15 @@ const appMenuItems = [
     icon: Icons.check_box_outlined,
   ),
 
-
-
-
   MenuItems(
-    title: 'App Tutorial',
-    subtitle: 'Introducción a la App',
+    title: 'Introducción a la aplicación',
+    subtitle: 'Pequeño tutorial de introducción',
     link: AppTutorialScreen.name,
     icon: Icons.accessibility_new_outlined,
   ),
+
+
+
 
   MenuItems(
     title: 'Infinte Scroll & Pull to refresh',
