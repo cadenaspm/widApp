@@ -51,6 +51,12 @@ const appMenuItems = [
     icon: Icons.animation_outlined,
   ),
 
+  MenuItems(
+    title: 'UI Controls + Tiles',
+    subtitle: 'Controles de UI',
+    link: UiControlsScreen.name,
+    icon: Icons.check_box_outlined,
+  ),
 
 
 
@@ -71,10 +77,4 @@ const appMenuItems = [
 
   
 
-  MenuItems(
-    title: 'UI Controls + Tiles',
-    subtitle: 'Controles de UI',
-    link: UiControlsScreen.name,
-    icon: Icons.check_box_outlined,
-  ),
 ];
