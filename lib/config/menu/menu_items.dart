@@ -65,9 +65,6 @@ const appMenuItems = [
     icon: Icons.accessibility_new_outlined,
   ),
 
-
-
-
   MenuItems(
     title: 'Infinte Scroll & Pull to refresh',
     subtitle: 'Listas infinitas y Pull to refresh',
