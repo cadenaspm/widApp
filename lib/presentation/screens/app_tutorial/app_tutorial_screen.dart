@@ -1,4 +1,6 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SlideInfo {
   final String title;
@@ -32,10 +34,44 @@ final slides = <SlideInfo>[
   ),
 ];
 
-class AppTutorialScreen extends StatelessWidget {
+class AppTutorialScreen extends StatefulWidget {
   static const name = 'tutorial';
 
   const AppTutorialScreen({super.key});
+
+  @override
+  State<AppTutorialScreen> createState() => _AppTutorialScreenState();
+}
+
+class _AppTutorialScreenState extends State<AppTutorialScreen> {
+
+  final PageController pageController = PageController();
+  bool endPage = false;
+
+  @override
+  void initState() {
+    super.initState();
+
+    pageController.addListener(() {
+      
+      final page = pageController.page ?? 0;
+      if(!endPage && page >= (slides.length - 1.5 )){
+        setState(() {
+          endPage = true;
+        });
+      }
+      print('${pageController.page}');
+
+    });
+  }
+
+  @override
+  void dispose() {
+    pageController.dispose();
+    
+    super.dispose();
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -44,6 +80,7 @@ class AppTutorialScreen extends StatelessWidget {
       body: Stack(
         children: [
           PageView(
+            controller: pageController,
             physics: BouncingScrollPhysics(),
             children: slides
                 .map(
@@ -65,8 +102,22 @@ class AppTutorialScreen extends StatelessWidget {
                 Navigator.of(context).pop();
               },
             ),
+          ),
 
-          )
+          endPage
+            ? Positioned(
+              right: 20,
+              bottom: 50,
+              child: FadeInRight(
+                from: 15,
+                delay: const Duration(milliseconds: 500  ),
+                child: FilledButton(
+                  onPressed: () => context.pop(),
+                  child: const Text('Comenzar'),
+                ),
+              ),
+            )
+            :SizedBox()
         ],
       ),
     );
