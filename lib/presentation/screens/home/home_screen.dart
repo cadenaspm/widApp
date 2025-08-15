@@ -3,9 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:widgets_app/config/menu/menu_items.dart';
 
 class HomeScreen extends StatelessWidget {
-
   static const String name = "/buttons";
-
 
   const HomeScreen({super.key});
 
@@ -14,6 +12,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('Flutter + Material 3')),
       body: _HomeView(listItems: appMenuItems),
+      drawer: NavigationDrawer(children: []),
     );
   }
 }
@@ -35,21 +34,19 @@ class _HomeView extends StatelessWidget {
     return ListView.builder(
       physics: BouncingScrollPhysics(),
       itemCount: listItems.length,
-      itemBuilder: (context, index) => _ItemListTile(menuItem: listItems[index],),
+      itemBuilder: (context, index) =>
+          _ItemListTile(menuItem: listItems[index]),
     );
   }
 }
 
 class _ItemListTile extends StatelessWidget {
-  const _ItemListTile({
-    required this.menuItem,
-  });
+  const _ItemListTile({required this.menuItem});
 
   final MenuItems menuItem;
 
   @override
   Widget build(BuildContext context) {
-
     final colors = Theme.of(context).colorScheme;
 
     return ListTile(
@@ -58,9 +55,8 @@ class _ItemListTile extends StatelessWidget {
       subtitle: Text(menuItem.subtitle),
       trailing: Icon(Icons.arrow_forward_ios_outlined, color: colors.primary),
       onTap: () {
-
         //* context.go // Para hacer una navegacion rapida
-        //* context.push //Para hacer un stack de navegacion 
+        //* context.push //Para hacer un stack de navegacion
         //* context.push(menuItem.link);
         context.pushNamed(menuItem.link);
       },

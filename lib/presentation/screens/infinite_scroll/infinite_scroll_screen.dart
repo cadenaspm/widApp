@@ -57,7 +57,9 @@ class _InfiniteScrollScreenState extends State< InfiniteScrollScreen> {
     if(!isMounted) return;
 
     setState(() {});
-  }
+
+    moveScrollToTop();
+  } 
 
   Future<void> onRefresh() async {
 
@@ -82,8 +84,8 @@ class _InfiniteScrollScreenState extends State< InfiniteScrollScreen> {
     if(scrollController.positions.isEmpty) return;
 
     scrollController.animateTo(
-      0, 
-      duration: const Duration(milliseconds: 500), 
+      scrollController.position.pixels + 120, 
+      duration: const Duration(milliseconds: 300), 
       curve: Curves.fastOutSlowIn
     );
   }
