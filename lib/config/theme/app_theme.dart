@@ -16,7 +16,6 @@ const colorList = [
 class AppTheme {
   final int selectedColor;
   final bool isDarkMode;
-
   AppTheme({this.selectedColor = 0, this.isDarkMode = false});
 
   ThemeData getTheme() => ThemeData(
@@ -28,5 +27,10 @@ class AppTheme {
       backgroundColor: colorList[selectedColor],
       titleTextStyle: TextStyle(color: Colors.white, fontSize: 18),
     ),
+  );
+
+  AppTheme copyWith({int? selectedColor, bool? isDarkMode}) => AppTheme(
+    selectedColor: selectedColor ?? this.selectedColor,
+    isDarkMode: isDarkMode ?? this.isDarkMode,
   );
 }
