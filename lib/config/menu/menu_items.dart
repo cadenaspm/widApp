@@ -1,3 +1,4 @@
+import 'package:widgets_app/presentation/screens/counter/counter_screen.dart';
 import 'package:widgets_app/presentation/screens/screens.dart';
 
 class MenuItems {
@@ -17,6 +18,12 @@ class MenuItems {
 }
 
 const appMenuItems = [
+  MenuItems(
+    title: 'Counter Screen Riverpod',
+    subtitle: 'Implementación de un contador con Riverpod',
+    link: CounterScreen.name,
+    icon: Icons.control_point_outlined,
+  ),
   MenuItems(
     title: 'Botones',
     subtitle: 'Varios Botones en Flutter',
@@ -71,6 +78,7 @@ const appMenuItems = [
     link: InfiniteScrollScreen.name,
     icon: Icons.list_alt_outlined,
   ),
+
 
   
 
