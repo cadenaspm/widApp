@@ -1,20 +1,19 @@
+import 'package:flutter/material.dart';
 import 'package:widgets_app/presentation/screens/counter/counter_screen.dart';
 import 'package:widgets_app/presentation/screens/screens.dart';
 
 class MenuItems {
-
   final String title;
   final String subtitle;
   final String link;
   final IconData icon;
 
   const MenuItems({
-    required this.title, 
-    required this.subtitle, 
-    required this.link, 
-    required this.icon
+    required this.title,
+    required this.subtitle,
+    required this.link,
+    required this.icon,
   });
-
 }
 
 const appMenuItems = [
@@ -79,7 +78,10 @@ const appMenuItems = [
     icon: Icons.list_alt_outlined,
   ),
 
-
-  
-
+  MenuItems(
+    title: 'Theme changer',
+    subtitle: 'Cambio de tema de la aplicación',
+    link: ThemeChangerScreen.name,
+    icon: Icons.color_lens_outlined,
+  ),
 ];
